@@ -13,6 +13,9 @@ DataMapper.finalize
 # However, the database tables don't exist yet. Let's tell datamapper to create them
 DataMapper.auto_upgrade!
 
+enable :sessions
+set :session_secret, 'super secret'
+
 
 set :views, Proc.new { File.join(root, "..", "views") }
 
@@ -35,3 +38,22 @@ get '/tags/:text' do
   @links = tag ? tag.links : []
   erb :index
 end
+
+get '/users/new' do
+  # note the view is in views/users/new.erb
+  # we need the quotes because otherwise
+  # ruby would divide the symbol :users by the
+  # variable new (which makes no sense)
+  erb :"users/new"
+end
+
+post '/users' do
+  User.create(:email => params[:email],
+              :password => params[:password])
+  session[:user_id] = user.id
+  redirect to('/')
+end
+
+
+
+
