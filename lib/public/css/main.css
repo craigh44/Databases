@@ -100,21 +100,9 @@ body{
 	border-radius: 10px;
 }
 
-/*#pandas {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-}*/
-
-/*#pandas:hover {
-	opacity: 1;
-}*/
-
-
-
 #pandas {
   display: block;
-   margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
