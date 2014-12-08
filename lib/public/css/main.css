@@ -1,0 +1,140 @@
+body{
+/*background-image: url("/images/bookshelf-1.jpg");*/
+
+}
+
+#main-title {
+	text-align: center;
+	padding-bottom: 20px;
+	color: hotpink;
+}
+
+#new-link {
+	text-align: center;
+}
+
+#links-list-title {
+	/*text-align: center;*/
+	color: hotpink;
+}
+
+#link-input {
+	text-align: center;
+	padding: 10px;
+
+	 -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+#link-input:hover {
+	text-align: center;
+	padding: 10px;
+	background-color: hotpink;
+	color: white;
+}
+
+
+#all-links {
+	text-align: center;
+}
+
+#all-links-list {
+	/*list-style-type: none;*/
+}
+
+#add-link-button {
+	background-color: hotpink;
+	color: white;
+	border-radius: 10px;
+}
+
+#add-link-button:hover {
+	background-color: white;
+	color: hotpink;
+	border-radius: 10px;
+}
+
+#sign-up-form {
+	text-align: center;
+}
+
+#sign-up-title {
+	text-align: center;
+	color: hotpink;
+}
+
+#sign-up-button {
+	background-color: hotpink;
+	color: white;
+	border-radius: 10px;
+}
+
+#sign-up-button:hover {
+	background-color: white;
+	color: hotpink;
+	border-radius: 10px;
+}
+
+#sign-in-title {
+	text-align: center;
+	color: hotpink;
+}
+
+#sign-in-form {
+	text-align: center;
+}
+
+#sign-in-button {
+	background-color: hotpink;
+	color: white;
+	border-radius: 10px;
+}
+
+#sign-in-button:hover {
+	background-color: white;
+	color: hotpink;
+	border-radius: 10px;
+}
+
+/*#pandas {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
+/*#pandas:hover {
+	opacity: 1;
+}*/
+
+
+
+#pandas {
+  display: block;
+   margin-left: auto;
+  margin-right: auto;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+#pandas:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+
+
+
+
