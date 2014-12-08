@@ -24,7 +24,7 @@
 	<h3 id="links-list-title">My bookmarks</h3>
 	<ul id="all-links-list">
 	  <% @links.each do |link| %>
-	    <li><a href="<%= link.url %>"><%= link.title %></a></li>
+	    <li><a href="http://<%= link.url %>"><%= link.title %></a></li>
 
 	  <% end %>
 	</ul>
