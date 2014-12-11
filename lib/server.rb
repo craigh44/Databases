@@ -1,12 +1,12 @@
 require "data_mapper"
 require 'sinatra'
 require 'rack-flash'
-
+require './lib/helpers/helpers.rb'
 
 
 env = ENV["RACK_ENV"] || "development"
 # we're telling datamapper to use a postgres database on localhost. The name will be "bookmark_manager_test" or "bookmark_manager_development" depending on the environment
-DataMapper.setup(:default, "postgres://lurukbtubkrzhe:UQSGG7BN7Bf1TRNk2yT2Iiy03R@ec2-107-20-245-187.compute-1.amazonaws.com:5432/db41gpgnabtolc")
+DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
 
 require './lib/link' # this needs to be done after datamapper is initialised
 require './lib/tag'
@@ -29,11 +29,12 @@ set :views, Proc.new { File.join(root, "..", "views") }
 end
 
 post '/links' do
+  user_id = current_user.id
   url = params["url"]
   title = params["title"]
   tags = params["tags"].split(" ").map{|tag| 
   	Tag.first_or_create(:text => tag)}
-  Link.create(:url => url, :title => title, :tags => tags)
+  Link.create(:url => url, :title => title, :tags => tags, :user_id => user_id  )
   redirect to('/')
 end
 
@@ -84,7 +85,7 @@ post '/user/sign_in' do
     session[:user_id] = @user.id
     redirect to('/')
   else
-    flash[:notice] = "The email or password is incorrect"
+    flash[:error] = "The email or password is incorrect"
     erb :"users/sign_in"
   end
 end
@@ -93,16 +94,6 @@ delete '/sessions' do
   flash[:notice] = "Good bye!"
   session[:user_id] = nil
   redirect to('/')
-end
-
-
-
-helpers do
-
-  def current_user
-    @current_user ||=User.get(session[:user_id]) if session[:user_id]
-  end
-
 end
 
 

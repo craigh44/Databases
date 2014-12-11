@@ -4,6 +4,8 @@ class User
 
   include DataMapper::Resource
 
+  has n, :links
+
   property :id, Serial
   property :email, String
 

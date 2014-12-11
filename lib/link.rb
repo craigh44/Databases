@@ -4,6 +4,8 @@ class Link
 
   # this makes the instances of this class Datamapper resources
   include DataMapper::Resource
+
+  belongs_to :user
   
  has n, :tags, :through => Resource
   # This block describes what resources our model will have
