@@ -122,6 +122,20 @@ body{
   transform: scale(1.1);
 }
 
+#sign-out {
+	color: grey;
+	padding-top: 10px;
+}
+
+#sign-out-button {
+	background-color: Transparent;
+	border: none;
+}
+
+#sign-out-button:hover {
+	color: white;
+	border: none;
+}
 
 
 
