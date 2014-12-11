@@ -1,10 +1,11 @@
-body{
-/*background-image: url("/images/bookshelf-1.jpg");*/
-}
+body {
+/*	background-color: lightblue;
+*/}
 
 #main-title {
 	text-align: center;
 	padding-bottom: 20px;
+	padding-top: 100px;
 	color: hotpink;
 }
 
@@ -123,21 +124,74 @@ body{
 }
 
 #sign-out {
-	color: grey;
-	padding-top: 10px;
+	display: inline;
 }
 
 #sign-out-button {
+	padding-right: 30px;
 	background-color: Transparent;
 	border: none;
+	float: right;
+	display: inline;
+	color: white;
 }
 
 #sign-out-button:hover {
-	color: white;
+	color: black;
 	border: none;
 }
 
+.home-button {
+	display: inline;
+	text-decoration: none;
+	color: white;
+	padding-left: 30px;
+	padding-top: 20px;
+}
 
+.home-button:hover {
+	text-decoration: none;
+	color: black;
+	padding-left: 30px;
+}
 
+#navbar {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: grey;
+}
 
+#navbar li {
+	float: right;
+	display: inline;
+}
 
+#navbar ul {
+	display: inline;
+}
+
+#sign-up-button-nav {
+	color: white;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 30px;
+}
+
+#sign-in-button-nav {
+	color: white;
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+#sign-up-button-nav:hover {
+	color: black;
+}
+
+#sign-in-button-nav:hover {
+	color: black;
+}
+
+#main-title a {
+	text-decoration: underline;
+	color: hotpink;
+}

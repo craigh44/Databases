@@ -1,8 +1,8 @@
 <% if current_user %>
  <h1 id="main-title"> Welcome to your bookmark manager <%= current_user.email %></h1>
  <% else %>
- <h1 id="main-title">Welcome to Bookmark Manager<br> please sign up or sign in</h1>
- <a href="http://www.pandapop.co" target="_blank"><img id="pandas" src="/images/pandas.jpg"></a>
+ <h1 id="main-title">Welcome to Bookmark Manager<br> please <a href="/users/new">sign up</a> or <a href="/users/sign_in">sign in</a></h1>
+ <!-- <a href="http://www.pandapop.co" target="_blank"><img id="pandas" src="/images/pandas.jpg"></a> -->
 <% end %>
 
 
@@ -22,7 +22,7 @@
 
 <div id="all-links-section">
 	<h3 id="links-list-title">My bookmarks</h3>
-	<ul id="all-links-list">
+	<ul>
 	  <% @current_user.links.each do |link| %>
 	    <li><a href="http://<%= link.url %>"><%= link.title %></a></li>
 
