@@ -1,0 +1,72 @@
+<title>Bookmark Manager</title>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+</head>
+
+
+<body>
+
+<nav id="navbar" > 
+  <a class="home-button" href="/">Bookmark Manager</a>
+	
+  
+	  <form id="sign-out" method="post" action="/sessions">
+			<input type="hidden" name="_method" value="delete">
+			<input id="sign-out-button" type="submit" value="Sign out">
+		</form>
+	
+</nav>
+   
+
+
+
+
+ 	
+
+<!-- 	<nav id="navbar">
+  			<form id="sign-out" method="post" action="/sessions">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="Sign out" class='button'>
+				</form>
+  			
+				<a href="/users/new">Sign up</a>
+				<a href="/users/sign_in">Sign in<a>
+  	</nav> -->
+<!-- 
+	 -->
+
+   <h1 id="main-title"> Welcome to your bookmark manager alice@example.com</h1>
+ 
+
+<div id="new-link">
+  <form action="/links" method="post">
+    <input id="link-input" type="text" name="url" placeholder="URL">
+  </br>
+    <input id="link-input" type="text" name="title" placeholder="Title">
+      </br>
+   <!--  <input id="link-input" type="text" name="tags" placeholder="Tags"> -->
+      </br></br>
+    <input id="add-link-button" type="submit" value="Add link">
+  </form>
+</div>
+
+
+<div id="all-links-section">
+	<h3 id="links-list-title">My bookmarks</h3>
+	<ul>
+	  
+	    <li><a href="http://www.makersacademy.com">Makers Academy</a></li>
+
+	  
+	</ul>
+</div>
+
+
+
+
+
+
+
+</body>

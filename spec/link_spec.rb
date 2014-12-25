@@ -10,7 +10,8 @@ describe Link do
       expect(Link.count).to eq(0)
       # this creates it in the database, so it's stored on the disk
       Link.create(:title => "Makers Academy",
-                  :url => "http://www.makersacademy.com/")
+                  :url => "http://www.makersacademy.com/",
+                  :user_id => 1)
       # We ask the database how many links we have, it should be 1
       expect(Link.count).to eq(1)
       # Let's get the first (and only) link from the database
