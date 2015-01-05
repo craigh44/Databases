@@ -8,3 +8,7 @@
 		<br>
 		<input id="sign-in-button" type="submit" name="sign_in" value="Sign In">
 </form>
+
+	<% if flash[:notice] %>
+	  <div id="notice"><%= flash[:notice] %></div>
+	<% end %>

@@ -29,7 +29,7 @@ post '/user/sign_in' do
     session[:user_id] = @user.id
     redirect to('/')
   else
-    flash[:error] = "The email or password is incorrect"
+    flash[:notice] = "The email or password is incorrect"
     erb :"users/sign_in"
   end
 end
